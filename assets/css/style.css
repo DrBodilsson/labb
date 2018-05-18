@@ -1,0 +1,156 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+#form {
+  width: 100%;
+    padding: 12px 20px;
+    margin: 0px 0px 10px;
+    display: inline-block;
+    border-radius: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.error {
+	color: white;
+}
+#input {
+  width: 30%;
+    padding: 12px 20px;
+    margin: 0px 0px 10px;
+    display: inline-block;
+    border: 1px solid black;
+    box-sizing: border-box;
+    text-align: center;
+    background: radial-gradient(white, #ffff99);
+}
+#textarea {
+  width: 50%;
+    padding: 12px 20px;
+    margin: 0px 0px 10px;
+    display: inline-block;
+    border: 1px solid black;
+    box-sizing: border-box;
+    text-align: center;
+    background: radial-gradient(white, #ffff99);
+}
+#reg {
+  width: 15%;
+  padding: 12px 20px;
+  background: linear-gradient(#67ae55, #578843);
+  background-color: #69a74e;
+  box-shadow: inset 0 1px 1px #a4e388;
+  border-color: #3b6e22 #3b6e22 #2c5115;
+  color: white;
+}
+#submit {
+  width: 15%;
+    padding: 12px 20px;
+    margin: 0px 0px 10px;
+    display: inline-block;
+    border: 3px solid black;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    background: radial-gradient(#000000, #333333);
+}
+body {
+  background-image: url(../img/norrsken.jpg);
+  background-size: 1370px 700px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  left: 100px;
+}
+#text {
+  color: white;
+  text-align: center;
+}
+#resultat {
+  width: 50%;
+    padding: 52px 20px;
+    margin: 0px 5px 5px 5px;
+    display: inline-block;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background: radial-gradient(white, #ffff99);
+}
+.postadav {
+  text-align: left;
+  margin-top: -5%;
+
+}
+.anvandare {
+opacity: 0.4;
+}
+.comment {
+  margin-top: 15px;
+  margin-bottom: -5%;
+}
+#h1 {
+	text-align: center;
+	color: white;
+}
+#topnav {
+    position: relative;
+    overflow: hidden;
+    opacity: 0.9;
+
+}
+
+/* Style the links inside the navigation bar */
+#topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+#topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+#topnav a.homebutton {
+  margin-top: 25px;
+  color: white;
+
+}
+#logoutbutton {
+    float: left;
+}
+
+/* Centered section inside the top navigation*/
+#topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translate(-50%, -0%);
+}
+
+#topnav-right a {
+  float: right;
+  color: white;
+}
+#inlog {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+#headerlog {
+  text-align: center;
+  color: white;
+}
+#goback {
+  color: white;
+}
+#loginform {
+  margin-top: 2%;
+}
