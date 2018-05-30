@@ -1,41 +1,44 @@
 <?php
 
-$usernameErr = $mailErr = $passwordErr = $confirm_passwordErr = "";
+//$usernameErr = $mailErr = $passwordErr = $confirm_passwordErr = "";
 $usernameinsert = $mailinsert = $password = $confirm_password = "";
 $con = mysqli_connect("localhost", "root", "", "labb2");
-$flag = false;
+$usernameflag = $emailflag = $passwordflag = $confirm_passwordflag = false;
 require ("functions.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
    if (empty($_POST["username"])) {
-    $usernameErr = "Username is required";
-    $flag = false;
+    $usernameflag = false;
   } else {
     $usernameinsert = test_input(mysqli_real_escape_string($con, $_POST['username']));
-    $flag = true;
+    $usernameflag = true;
   }
-   if (empty($_POST["mail"])) {
-    $mailErr = "Email is required";
-    $flag = false;
-  } else {
-    $mailinsert = test_input(mysqli_real_escape_string($con, $_POST['mail']));
-    $flag = true;
+   if (empty($_POST["email"])) {
+    $emailflag = false;
+  } else if (!preg_match("/.+\@.+\../", $_POST["email"])) {
+    $emailflag = false;
+  }
+    else {
+    $mailinsert = test_input(mysqli_real_escape_string($con, $_POST['email']));
+    $emailflag = true;
   }
    if (empty($_POST["password"])) {
-    $passwordErr = "Password is required";
-    $flag = false;
-  } else {
-    $passwordinsert = test_input($_POST["password"]);
-    $flag = true;
+    $passwordflag = false;
+  } else if (strlen($_POST["password"]) < 8) {
+    $passwordflag = false;
   }
-   if (empty($_POST["confirm_password"])) {
-    $confirm_passwordErr = "Confirm password is required";
-    $flag = false;
+    else {
+    $passwordinsert = test_input(mysqli_real_escape_string($con, $_POST["password"]));
+    $passwordflag = true;
+  }
+  if (($_POST["password"]) != ($_POST["confirm_password"])) {
+    $confirm_passwordflag = false;
+  }
+   else if (empty($_POST["confirm_password"])) {
+    $confirm_passwordflag = false;
   } else {
     $confirm_password = test_input($_POST["confirm_password"]);
-    $flag = true;
+    $confirm_passwordflag = true;
   }
 }
-
-
 ?>
